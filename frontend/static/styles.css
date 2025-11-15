@@ -323,3 +323,17 @@ header {
     color: #E2E8F0;
     padding: 10px;
 }
+
+/* Length Info Warning */
+.length-info {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 14px;
+    color: #FFA500;
+    text-align: center;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background-color: rgba(255, 165, 0, 0.1);
+    border-radius: 5px;
+    border-left: 4px solid #FFA500;
+    animation: fadeIn 0.3s ease-in;
+}
