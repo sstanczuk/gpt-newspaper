@@ -24,16 +24,24 @@ function produceNewspaper() {
         return;
     }
 
+    // Get selected language
+    const selectedLanguage = document.getElementById('languageSelect').value;
+    
+    // Get selected article length
+    const selectedLength = document.getElementById('lengthSelect').value;
+
         // Show loading animation
     toggleLoading(true);
 
 
     const payload = {
         topics: topics,
-        layout: selectedLayout
+        layout: selectedLayout,
+        language: selectedLanguage,
+        length: selectedLength
     };
 
-    fetch('http://localhost:8000/generate_newspaper', {
+    fetch('/api/generate_newspaper', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
